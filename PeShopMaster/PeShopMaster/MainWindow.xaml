@@ -1,0 +1,22 @@
+﻿<Window x:Class="PeShopMaster.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PeShopMaster"
+        mc:Ignorable="d"
+        Title="{Binding ElementName=MainFrame , Path=Context.Title}" Height="600" Width="1000" MinHeight="600" MinWidth="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FF76E383">
+            <Label Content="Магазин для Животных" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></Label>
+            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="30,10,10,10"></Image>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+        </Grid>
+    </Grid>
+</Window>
