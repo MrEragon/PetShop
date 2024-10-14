@@ -49,11 +49,11 @@
                             <TextBlock Text="{Binding Cost, StringFormat= {}Цена: {0}}"></TextBlock>
                         </StackPanel>
                         <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{Binding CountOnStorage, StringFormat= {}Наличие на складе: {0}}"></TextBlock>
-                        <Button Grid.Column="3" x:Name="DeleteButton" Content="Удалить" Click="DeleteButton_Click"></Button>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Grid.Row="3" x:Name="BackButton" Content="Назад" Click="BackButton_Click"></Button>
+        <Button Grid.Row="3" x:Name="BackButton" Content="Назад" Click="BackButton_Click" HorizontalAlignment="Left" Margin="10,0,0,0"></Button>
+        <Button Grid.Row="3" x:Name="AddButton" Content="Добавить" Click="AddButton_Click" HorizontalAlignment="Right" Margin="0,0,10,0"></Button>
     </Grid>
 </Page>

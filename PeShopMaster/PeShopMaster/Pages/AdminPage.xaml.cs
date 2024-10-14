@@ -139,5 +139,10 @@ namespace PeShopMaster.Pages
         {
             Update();
         }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

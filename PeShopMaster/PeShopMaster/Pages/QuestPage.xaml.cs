@@ -103,31 +103,6 @@ namespace PeShopMaster.Pages
         {
             Update();
         }
-
-       
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                var selected = (sender as Button).DataContext as Data.Product;
-                var forDelete = Data.Trade2Entities.GetContext().OrderProduct.Where(d => d.ProductArticleNumber == selected.ProductArticleNumber).ToList();
-                if (forDelete.Count() > 0)
-                {
-                    MessageBox.Show("Товар, который присутствует в заказе, удалить нельзя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                else
-                {
-                    Data.Trade2Entities.GetContext().Product.Remove(selected);
-                    MessageBox.Show("Товар успешно удалён", "Успех!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Update();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             if (Classes.Manager.MainFrame.CanGoBack)
