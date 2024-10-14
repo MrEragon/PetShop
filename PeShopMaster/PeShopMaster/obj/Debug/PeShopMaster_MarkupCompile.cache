@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Шарага\Лисавина\Петшоп\PeShopMaster\PeShopMaster\obj\Debug\
+C:\Users\Students.TEACH\Desktop\PetShop\PeShopMaster\PeShopMaster\obj\Debug\
 PeShopMaster
 none
 false
 DEBUG;TRACE
-E:\Шарага\Лисавина\Петшоп\PeShopMaster\PeShopMaster\App.xaml
-2563972398
-
-7-564481874
-13-1505183044
-MainWindow.xaml;Pages\LoginPage.xaml;
+C:\Users\Students.TEACH\Desktop\PetShop\PeShopMaster\PeShopMaster\App.xaml
+61803540583
+2-747231112
+291958389079
+18713538767
+MainWindow.xaml;Pages\AdminPage.xaml;Pages\ClientPage.xaml;Pages\LoginPage.xaml;Pages\ManagerPage.xaml;Pages\QuestPage.xaml;
 
 False
 

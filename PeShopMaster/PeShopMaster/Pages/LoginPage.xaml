@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:PeShopMaster.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Авторизация">
+      Title="ИС Товары для животных - Авторизация">
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -18,7 +18,7 @@
             <Label x:Name="Capcha" Content="Пройдите капчу" Visibility="Collapsed"></Label>
             <TextBox x:Name="CapchaBox" Width="100" IsEnabled="False" FontWeight="Bold" FontSize="16" Opacity="0.8" Visibility="Collapsed">
                 <TextBox.Background>
-                    <ImageBrush ImageSource="">
+                    <ImageBrush ImageSource="/Resources/forcaptcha.png" Stretch="UniformToFill" TileMode="None">
                         <ImageBrush.RelativeTransform>
                             <TransformGroup>
                                 <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1" ScaleY="1"/>

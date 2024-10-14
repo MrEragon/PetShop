@@ -133,7 +133,7 @@ namespace PeShopMaster.Pages
         }
         private void QuestButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.Manager.MainFrame.Navigate(new Pages.QuestPage());
         }
     }
 }

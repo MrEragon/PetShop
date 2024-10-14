@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Trade2ModelContainer" CdmEntityContainer="Trade2Entities">
+    <EntitySetMapping Name="CategoryProduct">
+      <EntityTypeMapping TypeName="Trade2Model.CategoryProduct">
+        <MappingFragment StoreEntitySet="CategoryProduct">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="Trade2Model.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="City1" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Index">
+      <EntityTypeMapping TypeName="Trade2Model.Index">
+        <MappingFragment StoreEntitySet="Index">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ForIndex" ColumnName="ForIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NameofSupply">
+      <EntityTypeMapping TypeName="Trade2Model.NameofSupply">
+        <MappingFragment StoreEntitySet="NameofSupply">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Supply" ColumnName="Supply" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="Trade2Model.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDClient" ColumnName="IDClient" />
+          <ScalarProperty Name="OrderCreateDate" ColumnName="OrderCreateDate" />
+          <ScalarProperty Name="OrderDeliveryDate" ColumnName="OrderDeliveryDate" />
+          <ScalarProperty Name="OrderPickupPoint" ColumnName="OrderPickupPoint" />
+          <ScalarProperty Name="ApplyCode" ColumnName="ApplyCode" />
+          <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderProduct">
+      <EntityTypeMapping TypeName="Trade2Model.OrderProduct">
+        <MappingFragment StoreEntitySet="OrderProduct">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductArticleNumber" ColumnName="ProductArticleNumber" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderStatus">
+      <EntityTypeMapping TypeName="Trade2Model.OrderStatus">
+        <MappingFragment StoreEntitySet="OrderStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PickPoint">
+      <EntityTypeMapping TypeName="Trade2Model.PickPoint">
+        <MappingFragment StoreEntitySet="PickPoint">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDIndex" ColumnName="IDIndex" />
+          <ScalarProperty Name="IDCity" ColumnName="IDCity" />
+          <ScalarProperty Name="IDStreet" ColumnName="IDStreet" />
+          <ScalarProperty Name="House" ColumnName="House" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producer">
+      <EntityTypeMapping TypeName="Trade2Model.Producer">
+        <MappingFragment StoreEntitySet="Producer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Producer1" ColumnName="Producer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="Trade2Model.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductArticleNumber" ColumnName="ProductArticleNumber" />
+          <ScalarProperty Name="IDSupply" ColumnName="IDSupply" />
+          <ScalarProperty Name="IDUnits" ColumnName="IDUnits" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="MaxDiscount" ColumnName="MaxDiscount" />
+          <ScalarProperty Name="IDProducer" ColumnName="IDProducer" />
+          <ScalarProperty Name="IDProvider" ColumnName="IDProvider" />
+          <ScalarProperty Name="IDCategoryProduct" ColumnName="IDCategoryProduct" />
+          <ScalarProperty Name="CurrentDiscount" ColumnName="CurrentDiscount" />
+          <ScalarProperty Name="CountOnStorage" ColumnName="CountOnStorage" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductPhoto" ColumnName="ProductPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provider">
+      <EntityTypeMapping TypeName="Trade2Model.Provider">
+        <MappingFragment StoreEntitySet="Provider">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Provider1" ColumnName="Provider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="Trade2Model.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Street">
+      <EntityTypeMapping TypeName="Trade2Model.Street">
+        <MappingFragment StoreEntitySet="Street">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Street1" ColumnName="Street" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="Trade2Model.Units">
+        <MappingFragment StoreEntitySet="Units">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="Trade2Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="UserSurname" ColumnName="UserSurname" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPatronymic" ColumnName="UserPatronymic" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

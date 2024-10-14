@@ -9,6 +9,52 @@
       Title="ManagerPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="CountOfLabel" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Content="11/65" Margin="10,0,0,0"></Label>
+        <Label x:Name="FIOLabel" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Content="ФИО" Margin="0,0,10,0"></Label>
+        <Grid Grid.Row="1">
+            <TextBox x:Name="SearchTextBox" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" TextChanged="SearchTextBox_TextChanged"></TextBox>
+            <RadioButton x:Name="SortUpRadioButton" Content="По возрастанию" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" Checked="SortUpRadioButton_Checked"></RadioButton>
+            <RadioButton x:Name="SortDownRadioButton" Content="По убыванию" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" Checked="SortDownRadioButton_Checked"></RadioButton>
+            <ComboBox x:Name="ProducerCombobox" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="450,0,0,0" Width="200" DisplayMemberPath="Producer1" SelectionChanged="ProducerCombobox_SelectionChanged"></ComboBox>
+        </Grid>
+        <ListView x:Name="ProductsListView" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="400"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Margin="10">
+                            <Image.Source>
+                                <Binding Path="ProductPhoto">
+                                    <Binding.TargetNullValue>
+                                        <BitmapImage UriSource="/Resources/picture.png"></BitmapImage>
+                                    </Binding.TargetNullValue>
+                                </Binding>
+                            </Image.Source>
+                        </Image>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="{Binding NameOfSupply.Supply, StringFormat=  {}Наименование товара: {0}}" FontWeight="Bold"></TextBlock>
+                            <TextBlock Text="{Binding Description, StringFormat=  {}Описание: {0}}" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="{Binding Producer.Producer1, StringFormat=  {}Производитель: {0}}"></TextBlock>
+                            <TextBlock Text="{Binding Cost, StringFormat= {}Цена: {0}}"></TextBlock>
+                        </StackPanel>
+                        <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{Binding CountOnStorage, StringFormat= {}Наличие на складе: {0}}"></TextBlock>
+                        <Button Grid.Column="3" x:Name="EditButton" Content="Удалить" Click="EditButton_Click"></Button>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="3" x:Name="BackButton" Content="Назад" Click="BackButton_Click" HorizontalAlignment="Left" Margin="10,0,0,0"></Button>
+        <Button Grid.Row="3" x:Name="AddButton" Content="Добавить" Click="AddButton_Click" HorizontalAlignment="Right" Margin="0,0,10,0"></Button>
     </Grid>
 </Page>
