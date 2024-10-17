@@ -82,3 +82,5 @@ C:\Users\lisav\Desktop\PetShop\PeShopMaster\PeShopMaster\obj\Debug\PeShopMaster.
 C:\Users\lisav\Desktop\PetShop\PeShopMaster\PeShopMaster\obj\Debug\PeShopMaster.csproj.CopyComplete
 C:\Users\lisav\Desktop\PetShop\PeShopMaster\PeShopMaster\obj\Debug\PeShopMaster.exe
 C:\Users\lisav\Desktop\PetShop\PeShopMaster\PeShopMaster\obj\Debug\PeShopMaster.pdb
+C:\Users\lisav\Desktop\PetShop\PeShopMaster\PeShopMaster\obj\Debug\Pages\AddorEditPage.g.cs
+C:\Users\lisav\Desktop\PetShop\PeShopMaster\PeShopMaster\obj\Debug\Pages\AddorEditPage.baml

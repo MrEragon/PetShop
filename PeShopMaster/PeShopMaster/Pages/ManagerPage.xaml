@@ -24,6 +24,15 @@
             <ComboBox x:Name="ProducerCombobox" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="450,0,0,0" Width="200" DisplayMemberPath="Producer1" SelectionChanged="ProducerCombobox_SelectionChanged"></ComboBox>
         </Grid>
         <ListView x:Name="ProductsListView" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Grid.Row="2">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding CountOnStorage}" Value="0">
+                            <Setter Property="Background" Value="#FF595757" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

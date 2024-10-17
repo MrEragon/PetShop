@@ -1,0 +1,61 @@
+﻿<Page x:Class="PeShopMaster.Pages.AddorEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PeShopMaster.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="ИС Товары для животных - Добавление/Редактирование товаров">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="ID" Grid.Row="0" Grid.Column="0"></Label>
+            <Label Content="Наименование:" Grid.Row="1" Grid.Column="0"></Label>
+            <Label Content="Категория:" Grid.Row="2" Grid.Column="0"></Label>
+            <Label Content="Кол-во на складе:" Grid.Row="3" Grid.Column="0"></Label>
+            <Label Content="Единица измерения" Grid.Row="4" Grid.Column="0"></Label>
+            <Label Content="Поставщик" Grid.Row="0" Grid.Column="2"></Label>
+            <Label Content="Стоимость за единицу:" Grid.Row="1" Grid.Column="2"></Label>
+            <Label Content="Изображение:" Grid.Row="2" Grid.Column="2"></Label>
+            <Label Content="Подробное описание:" Grid.Row="3" Grid.Column="2"></Label>
+
+            <TextBox x:Name="IDBox" Grid.Column="1" Grid.Row="0"></TextBox>
+            <TextBox x:Name="NameTextBox" Grid.Column="1" Grid.Row="1"></TextBox>
+            <ComboBox x:Name="CategoryComboBox" Grid.Column="1" Grid.Row="2" DisplayMemberPath="CategoryProduct.Name" VerticalAlignment="Top"></ComboBox>
+            <TextBox x:Name="CountOnStorageBox" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top"></TextBox>
+            <TextBox x:Name="UnitBox" Grid.Column="1" Grid.Row="4"></TextBox>
+            <TextBox x:Name="SupplierBox" Grid.Column="3" Grid.Row="0"></TextBox>
+            <TextBox x:Name="CostBox" Grid.Column="3" Grid.Row="1"></TextBox>
+            <Image x:Name="ProductImage" Grid.Column="3" Grid.Row="2" Margin="10">
+                <Image.Source>
+                    <Binding Path="ProductPhoto">
+                        <Binding.TargetNullValue>
+                            <BitmapImage UriSource="/Resources/picture.png"></BitmapImage>
+                        </Binding.TargetNullValue>
+                    </Binding>
+                </Image.Source>
+            </Image>
+            <TextBox x:Name="DescriptionBox" Grid.Column="3" Grid.Row="3" Height="auto" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"></TextBox>
+        </Grid>
+        <Button x:Name="BackButton" Content="Назад" Click="BackButton_Click" Grid.Row="1" HorizontalAlignment="Left" Margin="10"></Button>
+        <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" Grid.Row="1" HorizontalAlignment="Right" Margin="10"></Button>
+    </Grid>
+</Page>

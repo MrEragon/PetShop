@@ -140,9 +140,14 @@ namespace PeShopMaster.Pages
             Update();
         }
 
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.Manager.MainFrame.Navigate(new Pages.AddorEditPage());
         }
     }
 }
