@@ -27,7 +27,7 @@
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
-            <Label Content="ID" Grid.Row="0" Grid.Column="0"></Label>
+            <Label x:Name="IDLable" Content="ID" Grid.Row="0" Grid.Column="0"></Label>
             <Label Content="Наименование:" Grid.Row="1" Grid.Column="0"></Label>
             <Label Content="Категория:" Grid.Row="2" Grid.Column="0"></Label>
             <Label Content="Кол-во на складе:" Grid.Row="3" Grid.Column="0"></Label>

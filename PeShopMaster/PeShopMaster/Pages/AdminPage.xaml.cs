@@ -142,12 +142,12 @@ namespace PeShopMaster.Pages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            Classes.Manager.MainFrame.Navigate(new Pages.AddorEditPage(null));
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            Classes.Manager.MainFrame.Navigate(new Pages.AddorEditPage());
+            Classes.Manager.MainFrame.Navigate(new Pages.AddorEditPage((sender as Button).DataContext as Data.Product));
         }
     }
 }
