@@ -32,7 +32,7 @@ namespace PeShopMaster.Pages
             CountOfLabel.Content = $"{Data.Trade2Entities.GetContext().Product.Count()}" + $"/{Data.Trade2Entities.GetContext().Product.Count()}";
             if (Classes.Manager.User != null)
             {
-                FIOLabel.Content = $"{Classes.Manager.User.UserSurname}" + $"{Classes.Manager.User.UserName}" + $"{Classes.Manager.User.UserPatronymic}";
+                FIOLabel.Content = $"{Classes.Manager.User.UserSurname}" + " " + $"{Classes.Manager.User.UserName}" + " " + $"{Classes.Manager.User.UserPatronymic}";
             }
             SearchTextBox.Text = string.Empty;
             SortDownRadioButton.IsChecked = false;
@@ -105,6 +105,10 @@ namespace PeShopMaster.Pages
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            FIOLabel.Visibility = Visibility.Collapsed;
+
+            Classes.Manager.User = null;
+
             if (Classes.Manager.MainFrame.CanGoBack)
             {
                 Classes.Manager.MainFrame.GoBack();
@@ -118,7 +122,7 @@ namespace PeShopMaster.Pages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.Manager.MainFrame.Navigate(new Pages.AddorEditPage(null));
         }
     }
 }

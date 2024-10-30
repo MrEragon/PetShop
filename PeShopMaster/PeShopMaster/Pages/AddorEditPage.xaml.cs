@@ -43,10 +43,10 @@ namespace PeShopMaster.Pages
             }
 
             DataContext = CurrentProduct;
-            init();
+            Init();
         }
 
-        public void init()
+        public void Init()
         {
             try
             {
@@ -112,7 +112,7 @@ namespace PeShopMaster.Pages
                 }
                 else
                 {
-                    var tryCount = Int32.TryParse(CountOnStorageBox.Text, out var resultQuantity);
+                    var tryCount = Int32.TryParse(CountOnStorageBox.Text, out var resultCount);
                     if (!tryCount)
                     {
                         errors.AppendLine("Количество - целое число");
@@ -284,6 +284,16 @@ namespace PeShopMaster.Pages
                     AdminPage.Update();
                     AdminPage.Init();
                 }
+                if (ClientPage != null)
+                {
+                    ClientPage.Update();
+                    ClientPage.Init();
+                }
+                if (ManagerPage != null)
+                {
+                    ManagerPage.Update();
+                    ManagerPage.Init();
+                }
             }
             catch (Exception ex)
             {
@@ -338,6 +348,5 @@ namespace PeShopMaster.Pages
                 MessageBox.Show($"Ошибка при выборе изображения: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
     }
 }
