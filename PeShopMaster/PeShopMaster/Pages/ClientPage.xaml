@@ -52,7 +52,7 @@
                             </Image.Source>
                         </Image>
                         <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
-                            <TextBlock Text="{Binding NameOfSupply.Supply, StringFormat=  {}Наименование товара: {0}}" FontWeight="Bold"></TextBlock>
+                            <TextBlock Text="{Binding NameofSupply.Supply, StringFormat=  {}Наименование товара: {0}}" FontWeight="Bold"></TextBlock>
                             <TextBlock Text="{Binding Description, StringFormat=  {}Описание: {0}}" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text="{Binding Producer.Producer1, StringFormat=  {}Производитель: {0}}"></TextBlock>
                             <TextBlock Text="{Binding Cost, StringFormat= {}Цена: {0}}"></TextBlock>
